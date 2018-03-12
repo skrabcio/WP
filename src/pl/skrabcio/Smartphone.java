@@ -1,10 +1,10 @@
 package pl.skrabcio;
 
-public class Smartphone implements PhoneSystem{
+public class Smartphone implements PhoneSystem {
 
 	@Override
-	
 	public void compose() {
-		System.out.println("Smartphone with ");
+
+		System.out.print("\n" + "Smartphone with");
 	}
 }

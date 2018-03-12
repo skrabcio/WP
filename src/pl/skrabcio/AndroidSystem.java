@@ -8,11 +8,9 @@ public class AndroidSystem extends PhoneDecorator {
 	}
 	
 	@Override
-	
 	public void compose() {
 		
 		super.compose();
-		System.out.println("Android");
+		System.out.print(" Android");
 	}
-	
 }
