@@ -15,4 +15,15 @@ public final class SingletonList {
 		list = new ArrayList<String>();
 	}
 	
+	public ArrayList<String> getList() {
+		return this.list;
+	}
+	
+	public void addToList(String element) {
+		list.add(element);
+	}
+	
+	public void removeFromList(int elementIndex) {
+		list.remove(elementIndex);
+	}
 }
