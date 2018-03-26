@@ -4,16 +4,16 @@ import java.util.ArrayList;
 
 public class Products implements FactoryInterface {
 	
-	private ArrayList<String> productsList = null;
+	private ArrayList<String> productsList = new ArrayList<String>();
 	
 	@Override
 	public void addItem(String nameItem) {
-		productsList.add(nameItem);
+		this.productsList.add(nameItem);
 	}
 	
 	@Override
 	public void deleteItem(int indexItem) {
-		productsList.remove(indexItem);
+		this.productsList.remove(indexItem);
 	}
 	
 	@Override
@@ -23,7 +23,7 @@ public class Products implements FactoryInterface {
 	
 	@Override
 	public void sortItem() {
-		productsList.sort(null);
+		this.productsList.sort(null);
 	}
 
 }

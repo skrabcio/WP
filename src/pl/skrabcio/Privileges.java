@@ -4,16 +4,16 @@ import java.util.ArrayList;
 
 public class Privileges implements FactoryInterface{
 
-private ArrayList<String> privilegesList = null;
+private ArrayList<String> privilegesList = new ArrayList<String>();
 	
 	@Override
 	public void addItem(String nameItem) {
-		privilegesList.add(nameItem);
+		this.privilegesList.add(nameItem);
 	}
 	
 	@Override
 	public void deleteItem(int indexItem) {
-		privilegesList.remove(indexItem);
+		this.privilegesList.remove(indexItem);
 	}
 	
 	@Override
@@ -23,7 +23,7 @@ private ArrayList<String> privilegesList = null;
 	
 	@Override
 	public void sortItem() {
-		privilegesList.sort(null);
+		this.privilegesList.sort(null);
 	}
 	
 	

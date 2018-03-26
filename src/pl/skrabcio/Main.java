@@ -6,12 +6,22 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Factory factoryObject = new Factory();
-		
-	Factory.createFactory(FactoryType.Users).addItem("Abc");
-	Factory.createFactory(FactoryType.Users).addItem("def");
-	Factory.createFactory(FactoryType.Users).addItem("ghj");
-	Factory.createFactory(FactoryType.Users).listItem();
+	FactoryInterface factoryUsers = (new Factory()).createFactory(FactoryType.Users);
+	FactoryInterface factoryProducts = (new Factory()).createFactory(FactoryType.Products);
+	
+	factoryUsers.addItem("User3");
+	factoryUsers.addItem("User2");
+	factoryUsers.addItem("User1");
+	System.out.println(factoryUsers.listItem());
+	factoryUsers.deleteItem(1);
+	System.out.println(factoryUsers.listItem());
+	factoryUsers.sortItem();
+	System.out.println(factoryUsers.listItem());
+	
+	factoryProducts.addItem("Product1");
+	factoryProducts.addItem("Product2");
+	factoryProducts.deleteItem(0);
+	System.out.println(factoryProducts.listItem());
 	}
 
 }

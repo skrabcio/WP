@@ -4,16 +4,16 @@ import java.util.ArrayList;
 
 public class Users implements FactoryInterface{
 
-	private ArrayList<String> usersList = new ArrayList<>();
+	private ArrayList<String> usersList = new ArrayList<String>();
 	
 	@Override
 	public void addItem(String nameItem) {
-		usersList.add(nameItem);
+		this.usersList.add(nameItem);
 	}
 	
 	@Override
 	public void deleteItem(int indexItem) {
-		usersList.remove(indexItem);
+		this.usersList.remove(indexItem);
 	}
 	
 	@Override
@@ -23,7 +23,7 @@ public class Users implements FactoryInterface{
 	
 	@Override
 	public void sortItem() {
-		usersList.sort(null);
+		this.usersList.sort(null);
 	}
 
 
