@@ -1,10 +1,12 @@
 package pl.skrabcio;
 
+import java.util.ArrayList;
+
 public interface FactoryInterface {
 	
-	public String addItem();
-	public String deleteItem();
-	public String listItem();
-	public String sortItem();
+	public void addItem(String nameItem);
+	public void deleteItem(int indexItem);
+	public ArrayList<String> listItem();
+	public void sortItem();
 
 }

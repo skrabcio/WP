@@ -2,28 +2,30 @@ package pl.skrabcio;
 
 import java.util.ArrayList;
 
-public class Products implements FactoryInterface {
-	
-	private ArrayList<String> productsList = null;
+public class Privileges implements FactoryInterface{
+
+private ArrayList<String> privilegesList = null;
 	
 	@Override
 	public void addItem(String nameItem) {
-		productsList.add(nameItem);
+		privilegesList.add(nameItem);
 	}
 	
 	@Override
 	public void deleteItem(int indexItem) {
-		productsList.remove(indexItem);
+		privilegesList.remove(indexItem);
 	}
 	
 	@Override
 	public ArrayList<String> listItem() {
-		return this.productsList;
+		return this.privilegesList;
 	}
 	
 	@Override
 	public void sortItem() {
-		productsList.sort(null);
+		privilegesList.sort(null);
 	}
+	
+	
 
 }

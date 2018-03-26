@@ -1,15 +1,23 @@
 package pl.skrabcio;
 
+import java.util.ArrayList;
+
 public class Factory {
 	
-	public static FactoryInterface getObject(String className) {
+	public enum FactoryType{
+		Users,
+		Products,
+		Privileges
+	}
+	
+	public static FactoryInterface createFactory(FactoryType factoryType) {
 		
-		if (className.equalsIgnoreCase("users")) return new Users();
-		if (className.equalsIgnoreCase("products")) return new Products();
-		
-		
-		
-		
+		switch (factoryType) {
+			case Users: return new Users();
+			case Privileges: return new Privileges();
+			case Products: return new Products();
+		}
+		throw new IllegalArgumentException(" Nie znaleziono " + factoryType);
 	}
 
 }
