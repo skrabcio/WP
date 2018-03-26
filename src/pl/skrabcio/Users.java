@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Users implements FactoryInterface{
 
-	private ArrayList<String> usersList = null;
+	private ArrayList<String> usersList = new ArrayList<>();
 	
 	@Override
 	public void addItem(String nameItem) {
